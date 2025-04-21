@@ -29,6 +29,7 @@ The game is built using:
 - HTML5 Canvas for rendering
 - Vanilla JavaScript for game logic
 - CSS for styling and animations
+- Node.js and Express for server deployment
 
 ### Game Components
 
@@ -38,11 +39,38 @@ The game is built using:
 - **Ground**: The bottom boundary of the game
 - **Score**: Tracks successful pipe passages
 
-## How to Run
+## How to Run Locally
 
 1. Clone this repository to your local machine
-2. Open the `index.html` file in a modern web browser
-3. No additional setup or installation required!
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open your browser and navigate to `http://localhost:3000`
+
+## Deploying to Heroku
+
+1. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+2. Login to Heroku:
+   ```bash
+   heroku login
+   ```
+3. Create a new Heroku app:
+   ```bash
+   heroku create
+   ```
+4. Deploy your code:
+   ```bash
+   git push heroku main
+   ```
+5. Open your app:
+   ```bash
+   heroku open
+   ```
 
 ## Browser Compatibility
 
@@ -61,10 +89,13 @@ The game works best in modern browsers that support HTML5 Canvas:
 
 ## Development
 
-The project consists of three main files:
+The project consists of the following files:
 
 - `index.html`: Game structure and canvas setup
 - `style.css`: Visual styling and animations
 - `game.js`: Game logic and mechanics
+- `server.js`: Express server setup
+- `package.json`: Project dependencies and scripts
+- `Procfile`: Heroku deployment configuration
 
 Feel free to modify the game parameters in `game.js` to adjust difficulty, speed, or visual elements!
